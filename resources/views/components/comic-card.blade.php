@@ -1,6 +1,6 @@
-<div>
+<div class="card">
 
-    <img src="{{ $img }}" alt="{{ $title }}-image" class="w-25">
+    <img src="{{ $img }}" alt="{{ $title }}-image">
 
     <span>{{ $title }}</span>
     
