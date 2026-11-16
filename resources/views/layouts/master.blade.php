@@ -13,7 +13,7 @@
 
 <body>
 
-    <header>
+    <header class="container">
 
         <a href="{{ route('comics') }}">
             <img src="{{ Vite::asset('resources/img/favicon.ico') }}" alt="DC logo">
@@ -35,30 +35,32 @@
     </header>
 
     <main>
-        <div class="container">
-            @yield('content')
-        </div>
+        @yield('content')
     </main>
 
     <footer>
 
         <nav id="footer-nav">
 
-            <a href="#">
-                <img src="{{ Vite::asset('resources/img/buy-comics-digital-comics.png') }}" alt="digital-comics-image">
-            </a>
-            <a href="#">
-                <img src="{{ Vite::asset('resources/img/buy-comics-merchandise.png') }}" alt="merchandise-image">
-            </a>
-            <a href="#">
-                <img src="{{ Vite::asset('resources/img/buy-comics-subscriptions.png') }}" alt="subscriptions-image">
-            </a>
-            <a href="#">
-                <img src="{{ Vite::asset('resources/img/buy-comics-shop-locator.png') }}" alt="shop-locator-image">
-            </a>
-            <a href="#">
-                <img src="{{ Vite::asset('resources/img/buy-dc-power-visa.svg') }}" alt="power-visa-image">
-            </a>
+            <div class="container">
+                <a href="#">
+                    <img src="{{ Vite::asset('resources/img/buy-comics-digital-comics.png') }}"
+                        alt="digital-comics-image">
+                </a>
+                <a href="#">
+                    <img src="{{ Vite::asset('resources/img/buy-comics-merchandise.png') }}" alt="merchandise-image">
+                </a>
+                <a href="#">
+                    <img src="{{ Vite::asset('resources/img/buy-comics-subscriptions.png') }}"
+                        alt="subscriptions-image">
+                </a>
+                <a href="#">
+                    <img src="{{ Vite::asset('resources/img/buy-comics-shop-locator.png') }}" alt="shop-locator-image">
+                </a>
+                <a href="#">
+                    <img src="{{ Vite::asset('resources/img/buy-dc-power-visa.svg') }}" alt="power-visa-image">
+                </a>
+            </div>
 
         </nav>
 

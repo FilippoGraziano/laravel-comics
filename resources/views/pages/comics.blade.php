@@ -5,16 +5,23 @@
 @endphp
 
 @section('content')
-    <div id="cards-container">
+    <img src="{{ Vite::asset('resources/img/jumbotron.jpg') }}" alt="jumbotron" id="jumbotron">
 
-        @foreach ($comics as $comic)
+    <div class="container">
+        
+        <div id="cards-container">
+            
+            <span id="series-badge">CURRENT SERIES</span>
 
-            <x-comic-card>
-                <x-slot:img>{{ $comic['thumb'] }}</x-slot-img>
-                    <x-slot:title>{{ $comic['series'] }}</x-slot-img>
-            </x-comic-card>
+            @foreach ($comics as $comic)
+                <x-comic-card>
+                    <x-slot:img>{{ $comic['thumb'] }}</x-slot-img>
+                        <x-slot:title>{{ $comic['series'] }}</x-slot-img>
+                </x-comic-card>
+            @endforeach
 
-        @endforeach
+        </div>
 
+        <button>LOAD MORE</button>
     </div>
 @endsection
