@@ -29,6 +29,10 @@ html {
     font-family: "Roboto Condensed", sans-serif;
 }
 
+button {
+    cursor: pointer;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -221,10 +225,39 @@ footer {
     #page-end {
         padding-top: 20px;
         padding-bottom: 20px;
+        background-color: #303030;
 
         .container {
             display: flex;
             justify-content: space-between;
+        }
+
+        button {
+            border: 2px solid var(--primary-color);
+            background-color: transparent;
+            color: inherit;
+            padding: 10px;
+        }
+
+        nav {
+
+            span {
+                color: var(--primary-color);
+                font-size: 18px;
+                font-weight: 600;
+                margin-right: 5px;
+            }
+
+            a {
+
+                margin-left: 15px;
+
+                img {
+                    vertical-align: middle;
+                }
+
+            }
+
         }
 
     }
