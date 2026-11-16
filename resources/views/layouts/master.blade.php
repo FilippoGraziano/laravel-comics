@@ -8,6 +8,15 @@
     {{-- assets con direttiva vite --}}
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
+    {{-- google font --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap"
+        rel="stylesheet"
+    >
+
+    {{-- icona --}}
     <link rel="icon" href="{{ Vite::asset('resources/img/favicon.ico') }}">
 
     <title>DC Comics</title>
@@ -53,19 +62,24 @@
                 <a href="#">
                     <img src="{{ Vite::asset('resources/img/buy-comics-digital-comics.png') }}"
                         alt="digital-comics-image">
+                    DIGITAL COMICS
                 </a>
                 <a href="#">
                     <img src="{{ Vite::asset('resources/img/buy-comics-merchandise.png') }}" alt="merchandise-image">
+                    DC MERCHANDISE
                 </a>
                 <a href="#">
                     <img src="{{ Vite::asset('resources/img/buy-comics-subscriptions.png') }}"
                         alt="subscriptions-image">
+                    SUBSCRIPTION
                 </a>
                 <a href="#">
                     <img src="{{ Vite::asset('resources/img/buy-comics-shop-locator.png') }}" alt="shop-locator-image">
+                    COMIC SHOP LOCATOR
                 </a>
                 <a href="#">
                     <img src="{{ Vite::asset('resources/img/buy-dc-power-visa.svg') }}" alt="power-visa-image">
+                    DC POWER VISA
                 </a>
             </div>
 
