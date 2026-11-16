@@ -55,7 +55,7 @@ header {
 
         a:last-child {
             margin: 0;
-        }   
+        }
 
     }
 
@@ -103,7 +103,8 @@ main {
 
     }
 
-    .card:nth-child(2), .card:last-child {
+    .card:nth-child(2),
+    .card:last-child {
 
         img {
             width: 240px;
@@ -125,16 +126,50 @@ main {
 
 }
 
-#footer-nav {
+footer {
 
-    background-color: var(--primary-color);
+    #footer-nav {
 
-    a {
+        background-color: var(--primary-color);
 
-        img {
-            width: 100px;
+        a {
+
+            img {
+                width: 100px;
+            }
+
         }
 
+    }
+
+    #site-map {
+        background-image: url(../img/footer-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 20px;
+        padding-bottom: 30px;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        ul {
+            list-style: none;
+            display: inline-block;
+        }
+
+    }
+
+    #page-end {
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        
     }
 
 }
