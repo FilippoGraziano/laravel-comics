@@ -8,7 +8,9 @@
     {{-- assets con direttiva vite --}}
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
-    <title>Comics</title>
+    <link rel="icon" href="{{ Vite::asset('resources/img/favicon.ico') }}">
+
+    <title>DC Comics</title>
 </head>
 
 <body>
@@ -16,20 +18,23 @@
     <header class="container">
 
         <a href="{{ route('comics') }}">
-            <img src="{{ Vite::asset('resources/img/favicon.ico') }}" alt="DC logo">
+            <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="DC logo">
         </a>
 
         <nav>
-            <a href="{{ route('characters') }}">CHARACTERS</a>
-            <a href="{{ route('comics') }}">COMICS</a>
-            <a href="{{ route('movies') }}">MOVIE</a>
-            <a href="{{ route('tv') }}">TV</a>
-            <a href="{{ route('games') }}">GAMES</a>
-            <a href="{{ route('collectibles') }}">COLLECTIBLES</a>
-            <a href="{{ route('videos') }}">VIDEOS</a>
-            <a href="{{ route('fans') }}">FANS</a>
-            <a href="{{ route('news') }}">NEWS</a>
-            <a href="{{ route('shop') }}">SHOP</a>
+
+            {{-- request() è un helper di laravel che restituisce un'istanza che rappresenta la richiesta HTTP dell'utente e all'interno di questo istanza c'è routeIs(), un metodo che permette di controllare quale rotta è attiva --}}
+
+            <a class="{{ request()->routeIs('characters') ? 'active' : '' }}" href="{{ route('characters') }}">CHARACTERS</a>
+            <a class="{{ request()->routeIs('comics') ? 'active' : '' }}" href="{{ route('comics') }}">COMICS</a>
+            <a class="{{ request()->routeIs('movies') ? 'active' : '' }}" href="{{ route('movies') }}">MOVIE</a>
+            <a class="{{ request()->routeIs('tv') ? 'active' : '' }}" href="{{ route('tv') }}">TV</a>
+            <a class="{{ request()->routeIs('games') ? 'active' : '' }}" href="{{ route('games') }}">GAMES</a>
+            <a class="{{ request()->routeIs('collectibles') ? 'active' : '' }}" href="{{ route('collectibles') }}">COLLECTIBLES</a>
+            <a class="{{ request()->routeIs('videos') ? 'active' : '' }}" href="{{ route('videos') }}">VIDEOS</a>
+            <a class="{{ request()->routeIs('fans') ? 'active' : '' }}" href="{{ route('fans') }}">FANS</a>
+            <a class="{{ request()->routeIs('news') ? 'active' : '' }}" href="{{ route('news') }}">NEWS</a>
+            <a class="{{ request()->routeIs('shop') ? 'active' : '' }}" href="{{ route('shop') }}">SHOP</a>
         </nav>
 
     </header>
